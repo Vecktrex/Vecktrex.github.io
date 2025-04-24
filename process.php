@@ -1,8 +1,8 @@
 <?php
 
 $name = $_GET["fullname"];
-$name = $_GET["email"];
+$email = $_GET["email"];
 
-echo "<p>$fullname has an email address of $email</p>";
+echo "<p>$name has an email address of $email</p>";
 
 ?>
