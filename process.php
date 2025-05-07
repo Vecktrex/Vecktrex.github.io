@@ -18,7 +18,16 @@ $sql = "INSERT INTO Inventory VALUES(?, ?, ?, ?, ?)";
 $statement = $pdo->prepare($sql);
 $params = [$sku, $itemName, $itemQuantity, $itemCost, $sellPrice];
 $statement->execute($params);
-echo "$itemName was entered into the system.";
+echo "$itemName was entered into the system.<br>\n";
+
+$sql = "SELECT * FROM Inventory";
+$statement = $pdo->query($sql);
+echo "Current items logged into inventory database<br>\n";
+foreach ($statement as $row) {
+echo "SKU Number: $row[sku] <br>\n Item name: $row[Item] <br>\n Quantity: $row[Quantity]
+<br>\n Purchase cost: $row[Cost]<br>\n Sell price: $row[Price]<br>\n";
+echo "<br>\n";
+}
 
 } catch (PDOException $e) {
 echo $e;
