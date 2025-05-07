@@ -2,7 +2,7 @@
 
 $sku = $_POST["sku"];
 $itemName = $_POST["itemName"];
-$itemQuantity = $_POST["quantity"];
+$itemQuantity = $_POST["itemQuantity"];
 $itemCost = $_POST["itemCost"];
 $sellPrice = $_POST["sellPrice"];
 
@@ -14,7 +14,7 @@ $pdo = new PDO($dsn, $username, $password);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 try {
-$sql = "INSERT INTO Inventory VALUES ('$sku', '$itemName', '$itemQuantity', '$itemCost', '$sellPrice')";
+$sql = "INSERT INTO Inventory VALUES(?, ?, ?, ?, ?)";
 $statement = $pdo->prepare($sql);
 $params = [$sku, $itemName, $itemQuantity, $itemCost, $sellPrice];
 $statement->execute($params);
