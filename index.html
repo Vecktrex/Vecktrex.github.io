@@ -12,14 +12,26 @@
 </header>
 
 <main>
-    <form action="http://theshoebox.web1337.net/process.php" method="GET">
+    <form action="http://theshoebox.web1337.net/process.php" method="POST">
         <div>
-            <label for="fullname">Enter full name:</label>
-            <input id="fullname" name="fullname" type="text">
+            <label for="sku">Enter sku of product:</label>
+            <input id="sku" name="sku" type="text">
         </div>
         <div>
-            <label for="email">Enter email:</label>
-            <input id="email" name="email" type="email">
+            <label for="itemName">Enter the item name:</label>
+            <input id="itemName" name="itemName" type="text">
+        </div>
+        <div>
+            <label for="itemQuantity">Enter the quantity of the item for inventory:</label>
+            <input id="itemQuantity" name="itemQuantity" type="text">
+        </div>
+        <div>
+            <label for="itemCost">Enter cost for the item:</label>
+            <input id="itemCost" name="itemCost" type="text">
+        </div>
+        <div>
+            <label for="sellPrice">Enter sell price for the item:</label>
+            <input id="sellPrice" name="sellPrice" type="text">
         </div>
         <div>
             <input type="submit" value="Submit">
