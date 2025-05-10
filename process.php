@@ -19,6 +19,7 @@ $statement = $pdo->prepare($sql);
 $params = [$sku, $itemName, $itemQuantity, $itemCost, $sellPrice];
 $statement->execute($params);
 echo "$itemName was entered into the system.<br>\n";
+echo "<br>\n";
 
 $sql = "SELECT * FROM Inventory";
 $statement = $pdo->query($sql);
