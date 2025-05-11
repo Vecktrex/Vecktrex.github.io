@@ -6,7 +6,7 @@ $itemQuantity = $_POST["itemQuantity"];
 $itemCost = $_POST["itemCost"];
 $sellPrice = $_POST["sellPrice"];
 
-$dsn = "mysql:host=sql113.infinityfree.com;dbname=if0_38721731_cis224";
+$dsn = "mysql:host=sql113.infinityfree.com;dbname=if0_38721731_cis224inventory";
 $username = "if0_38721731";
 $password = "0L2slKW8df";
 $pdo = new PDO($dsn, $username, $password);

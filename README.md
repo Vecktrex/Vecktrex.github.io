@@ -20,10 +20,13 @@ The database has 5 fields:
 2. Item - varchar(255 character limit)
 3. Quantity - int(11 character limit)
 4. Cost - decimal(10, 2 character limit)
-5. Price decimal(10,2 character limit)
+5. Pric - decimal(10,2 character limit)
 
 KNOWN ISSUES:
 
 - On occasion the POST php script will fail to pass values along to the database, resulting in a constraint violation.
+- Some browsers on some systems fail to query entirely. Firefox has been the most reliable on my personal
+  machine/network.
+- There are particular difficulties with Chromium based browsers.
 - Early entries failed to properly display two outstanding digits for decimal values.
 
